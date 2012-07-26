@@ -1,0 +1,12 @@
+<professiongroup>
+	<profession id="846">
+		<title>something</title>
+		<male employfull="435" employpart="456" selffull="45" selfpart="35" />
+		<female employfull="165" employpart="102" selffull="15" selfpart="12" />
+	</profession>
+	<profession id="765">
+		<title>something else</title>
+		<male employfull="657" employpart="376" selffull="298" selfpart="187" />
+		<female employfull="589" employpart="398" selffull="206" selfpart="96" />
+	</profession>
+</professiongroup>

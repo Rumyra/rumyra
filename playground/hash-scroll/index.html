@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="en-english" />
+        <meta name="author" content="Ruth John" />
+        <meta name="copyright" content="Built by Ruth John, for Rumyra Ltd, London, England, 2012" />
+        <title>Hash scroll example</title>
+        <!--<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>-->
+        <style>
+            html {
+                background: -webkit-repeating-radial-gradient(center center, circle closest-corner, #bbb, #fff 3px);
+                background-size:9px 9px;
+            }
+            html, body, h1, dl, dt, dd, a {padding:0px; margin:0px; outline:none; border:none;}
+            body {font-family:'Helvetica Neue', 'arial', sans serif; font-size:62.5%; color:hsla(19,26%,22%,1); line-height:1; min-height:1000px; position:relative; padding-top:12em;
+                background: hsla(213,97%,20%,0.8);
+                background: -moz-radial-gradient(center, ellipse cover, hsla(213,97%,90%,0.8) 0%, hsla(213,97%,75%,0.8) 100%);
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,hsla(213,97%,90%,0.8)), color-stop(100%,hsla(213,97%,75%,0.8)));
+                background: -webkit-radial-gradient(center, ellipse cover, hsla(213,97%,90%,0.8) 0%,hsla(213,97%,75%,0.8) 100%);
+                background: -o-radial-gradient(center, ellipse cover, hsla(213,97%,90%,0.8) 0%,hsla(213,97%,75%,0.8) 100%);
+                background: radial-gradient(center, ellipse cover, hsla(213,97%,90%,0.8) 0%,hsla(213,97%,75%,0.8) 100%);
+            }
+            a {}
+            header {width:100%; padding:1em 0px; background-color:hsla(19,26%,22%,1); text-align:center; position:fixed; top:0px; left:0px;}
+            h1, nav {width:60%; margin:0px auto;}
+            h1 {font:bold 4.2em 'Playball', cursive; text-shadow:0px 1px 1px hsla(0,0%,0%,0.8); color:hsla(213,97%,75%,0.8);}
+            nav a {color:hsla(213,97%,75%,0.8); font-size:2.4em; text-decoration:none; display:inline-block; padding:0.5em; text-shadow:0px 1px 1px hsla(0,0%,0%,0.8);}
+            dl {margin:0px auto; width:60%; overflow:hidden; padding-top:4em;}
+            dt {font:bold 3.6em 'Playball', cursive; text-shadow:0px 1px 1px hsla(0,0%,80%,0.8);
+            }
+            dt:before {
+              display: block;
+              content: " ";
+              margin-top: -4em;
+              height: 4em;
+              visibility: hidden;
+            }
+            dd {font-size:2.4em; padding:0.5em 0px 2em; line-height:1.4; text-shadow:0px 1px 1px hsla(0,0%,80%,0.4); text-align:justify;}
+            dd span {font-size:2em; line-height:1;}
+
+            @media all and (max-width: 720px) {
+                dd {padding-top:70px;}
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Making a nice hash scolling experience</h1>
+            <nav>
+                <a href="#1a">Question 1</a>
+                <a href="#1b">Question 2</a>
+                <a href="#1c">Question 3</a>
+                <a href="#1d">Question 4</a>
+                <a href="#1e">Question 5</a>
+            </nav>
+        </header>
+
+        <dl>
+            <dt id="1a">Question 1</dt>
+            <dd>Follow the link marked join which will take you to the relevant section.We review each application for membership and aim to let you know within qo working days.</dd>
+
+            <dt id="1b">Question 2</dt>
+            <dd>Follow the link marked Forensic Odontologist list which will take you to the page where Odontologists are listed by region with full contact details..</dd>
+
+            <dt id="1c">Question 3</dt>
+            <dd>Unfortunately the subject is case dependent, which cannot be predicted. It is not a full time discipline. For this reason it is generally not possible to shadow an Odontologist - sorry.</dd>
+
+            <dt id="1d">Question 4</dt>
+            <dd>You should look at the available courses by following the link marked courses and then contact the particular institution directly and not through BAFO.</dd>
+
+            <dt id="1e">Question 5</dt>
+            <dd>Nunc non orci eget odio suscipit rutrum. Nullam quam neque, tempus at, semper in, semper eu, mi. Nulla eu turpis vitae arcu sagittis iaculis. Fusce ut nunc vel ligula convallis vulputate. Aliquam feugiat dui in risus. Sed hendrerit.</dd>
+        </dl>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+/*
+CONTENTS
+
+1. Reset and default style
+2. Site structure
+*/
+
+/*Font family declaration*/
+@font-face {
+    font-family: 'SansationRegular';
+    src: url('fonts/Sansation_Regular-webfont.eot');
+    src: url('fonts/Sansation_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Sansation_Regular-webfont.woff') format('woff'),
+         url('fonts/Sansation_Regular-webfont.ttf') format('truetype'),
+         url('fonts/Sansation_Regular-webfont.svg#SansationRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'WhiteRabbit';
+    src: url('fonts/whitrabt-webfont.eot');
+    src: url('fonts/whitrabt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/whitrabt-webfont.woff') format('woff'),
+         url('fonts/whitrabt-webfont.ttf') format('truetype'),
+         url('fonts/whitrabt-webfont.svg#NewRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*1. RESET AND DEFAULT STYLE--------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+header, hgroup, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, time,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, canvas, nav, footer, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: normal;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    background:transparent;
+}
+
+section, header, article, hgroup
+{display:block;}
+
+html {
+    background: #efefef;
+}
+
+body {font-size:62.5%; color:#111; line-height:1.4;
+    font-family: Helvetica,Arial,sans-serif;
+}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+/*text styling*/
+p {font-size:1.4em;}
+.lede {font-size:120%;}
+p.lede {font-size:1.7em;}
+strong, b {font-weight:bold;}
+em, i {font-style:italic;}
+dfn, abbr {border-bottom:1px dotted #111;}
+ins {border:1px dotted #111; border-width:0px 1px; padding:0px 3px; text-decoration:none; background-color:hsla(0,0%,10%,0.1);}
+small {font-size:92%;}
+code {background-color:hsla(230,60%,80%,0.7); font-family:'WhiteRabbit'; padding:0px 3px;}
+kbd {font-family:monospace; font-size:1.5em;}
+mark {background-color:hsla(62,100%,80%,0.9); padding:0px 3px;}
+sub {vertical-align:sub;}
+sup {vertical-align:super;}
+address, time {font-size:1.4em;}
+span.feature-text {font-weight:bold; font-style:italic;}
+
+/*lists*/
+ol, ul {list-style:none;}
+dl {}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse:collapse; border-spacing:0;}
+caption, th, td {text-align:left; font-weight:normal;}
+
+/*quotes*/
+blockquote:before, blockquote:after {content:'"';}
+blockquote {quotes:'"';}
+
+/*code blocks*/
+pre {font-size:1.4em;}
+
+/*headers*/
+h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3 {font-family:'SansationRegular';}
+h1 {font-size:3.2em;}
+h2 {font-size:2.4em;}
+h3 {font-size:2.1em;}
+h4 {font-size:1.8em;}
+h5 {font-size:1.6em;}
+h6 {font-size:1.4em;}
+
+/*links*/
+a {text-decoration:none; border-bottom:1px solid hsla(250,80%,60%,1); color:hsla(250,80%,60%,1); font-weight:normal; font-size:1.4em;
+    -webkit-transition: color 0.5s, border 0.5s;
+}
+a:hover, a:active {border-bottom-color:hsla(150,80%,60%,0.9); color:hsla(150,80%,60%,0.9);}
+p a, h1 a, address a {font-size:1em;}
+
+/*forms*/
+form {}
+fieldset {overflow:hidden;}
+legend {display:none;}
+label, input, select, textarea {display:inline-block;}
+label {font-size:1.4em; text-align:right;}
+input, select, textarea {font-family: Helvetica,Arial,sans-serif; font-size:1.4em; padding:6px 8px; background-color:#fcfcfc;
+    border:1px solid #7745a1;
+    border-top-color:#441968;
+    border-left-color:#441968;
+    border-radius: 2px;
+}
+input.check, input[type=checkbox] {width:20px; border:none;}
+select {padding:4px 6px; width:176px; margin-right:190px;}
+input:focus, select:focus, textarea:focus {background-color:#fff;}
+/*form errors*/
+input.input-error, select.input-error, textarea.input-error {width:354px; border:2px solid #91196A; background-color:#f9e2f1;}
+select.input-error {width:174px;}
+
+/*images*/
+img {margin-bottom:10px;}
+
+/*button styles*/
+
+button, .button {display:inline-block; padding:6px 20px;
+    color:white; text-decoration:none;
+    border:1px solid #072346; border-radius:7px;
+    background-image:-webkit-linear-gradient(top,#0f468d,#072346);
+}
+button {font-size:1.4em;}
+
+/*SITE STRUCTURE AND MEDIA QUERIES*/
+
+
+

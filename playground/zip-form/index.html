@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Using Ziptastic</title>
+
+<style>
+#page-wrap { width: 960px; margin: 80px auto; }
+
+div, h1, form, fieldset, legend, input, label, p {
+  margin: 0; 
+  padding: 0; 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+/*font stuff*/
+h1, legend, input, label, p {
+  font: bold 20px "Lucida Grande" sans-serif;
+  letter-spacing: -1px;
+  text-shadow:
+    1px 1px 1px hsla(0,0%,0%,0.4),
+    -1px -1px 1px hsla(0,0%,100%,0.6);
+}
+#zip-form-wrap { 
+  padding: 40px 60px 40px 120px;
+  background-color: hsla(159,21%,32%,1);
+  background-image:
+    -webkit-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 3%,
+      hsla(36,44%,64%,1) 3%,
+      hsla(36,44%,64%,1) 6%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(15,27%,60%,1) 9%,
+      hsla(159,12%,29%,1) 9%,
+      hsla(159,12%,29%,1) 97%,
+      hsla(332,28%,54%,1) 97%,
+      hsla(332,28%,54%,1)
+    );
+    background-image:
+    -moz-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 3%,
+      hsla(36,44%,64%,1) 3%,
+      hsla(36,44%,64%,1) 6%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(15,27%,60%,1) 9%,
+      hsla(159,12%,29%,1) 9%,
+      hsla(159,12%,29%,1) 97%,
+      hsla(332,28%,54%,1) 97%,
+      hsla(332,28%,54%,1)
+    );
+    box-shadow: 5px 5px 12px hsla(0,0%,0%,0.4);
+    border: 4px solid #d6d6d6;
+}
+
+#zip-form-wrap h1 {
+  font-size: 52px;
+  letter-spacing: -2px;
+  color: hsla(332,28%,54%,1);
+  text-shadow:
+    1px 1px 1px hsla(0,0%,0%,0.6),
+    -1px -1px 1px hsla(0,0%,100%,0.9);
+  margin: 0 0 30px 0;
+}
+.fancy-form fieldset {
+  border: none;
+}
+.fancy-form legend {
+  font-size: 36px;
+  color: hsla(15,27%,60%,1);
+  padding-bottom: 20px;
+}
+.fancy-form label {
+  display: block;
+  width: 20%;
+  font-size: 24px;
+  line-height: 40px;
+  color: hsla(36,44%,64%,1);
+}
+.fancy-form input {font-size:20px;}
+.fancy-form input:not([type=submit]) {
+  width: 80%;
+  float: right;
+  padding: 9px 3% 9px 7%;
+  color: hsla(53,54%,67%,1);
+  font-weight: normal;
+  background-color: hsla(0,0%,100%,1);
+  background-image:
+    -webkit-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.9) 6%,
+      hsla(159,12%,29%,0.9) 98%,
+      hsla(332,28%,54%,1) 98%,
+      hsla(332,28%,54%,1)
+    );
+  background-image:
+    -moz-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.9) 6%,
+      hsla(159,12%,29%,0.9) 98%,
+      hsla(332,28%,54%,1) 98%,
+      hsla(332,28%,54%,1)
+    );
+  border: none;
+  box-shadow:
+    inset -1px -1px 1px hsla(0,0%,100%,0.6),
+    inset 1px 1px 1px hsla(0,0%,0%,0.6)
+  ;
+}
+.fancy-form input:not([type=submit]):focus {
+  background-image:
+    -webkit-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.8) 6%,
+      hsla(159,12%,29%,0.8) 98%,
+      hsla(332,28%,54%,1) 98%,
+      hsla(332,28%,54%,1)
+    );
+  background-image:
+    -moz-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.8) 6%,
+      hsla(159,12%,29%,0.8) 98%,
+      hsla(332,28%,54%,1) 98%,
+      hsla(332,28%,54%,1)
+    );
+}
+.fancy-form input[type=submit] {
+  padding: 10px 20px 10px 30px;
+  border: none;
+  background-image:
+    -webkit-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 5%,
+      hsla(36,44%,64%,1) 5%,
+      hsla(36,44%,64%,1) 10%,
+      hsla(15,27%,60%,1) 10%,
+      hsla(15,27%,60%,1) 15%,
+      hsla(332,28%,54%,1) 15%,
+      hsla(332,28%,54%,1)
+    );
+  background-image:
+    -moz-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 5%,
+      hsla(36,44%,64%,1) 5%,
+      hsla(36,44%,64%,1) 10%,
+      hsla(15,27%,60%,1) 10%,
+      hsla(15,27%,60%,1) 15%,
+      hsla(332,28%,54%,1) 15%,
+      hsla(332,28%,54%,1)
+    );
+  box-shadow:
+    inset 1px 1px 1px hsla(0,0%,100%,0.6),
+    inset -1px -1px 1px hsla(0,0%,0%,0.6)
+  ;
+  color: hsla(159,12%,29%,1);
+  text-shadow:
+    -1px -1px 1px hsla(0,0%,0%,0.4),
+    1px 1px 1px hsla(0,0%,100%,0.6)
+  ;
+}
+.fancy-form fieldset > div {
+  clear: both;
+  overflow: hidden;
+}
+.fancy-form fieldset > div > div {
+  padding-bottom: 20px;
+}
+.fancy-form .city-wrap {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+.fancy-form .state-wrap {
+  width: 48%;
+  float: left;
+}
+.fancy-form .zip-wrap {
+  width: 48%;
+}
+
+.zip-error {
+  font-weight: normal;
+  color: hsla(332,28%,54%,1);
+  clear: both;
+  padding-top: 15px;
+  /*display: none;*/
+}
+
+.error input:not([type=submit]) {
+  background-image:
+    -webkit-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.8) 6%,
+      hsla(159,12%,29%,0.8) 90%,
+      hsla(332,28%,54%,1) 90%
+    );
+  background-image:
+    -moz-linear-gradient(
+      left,
+      hsla(53,54%,67%,1) 2%,
+      hsla(36,44%,64%,1) 2%,
+      hsla(36,44%,64%,1) 4%,
+      hsla(15,27%,60%,1) 4%,
+      hsla(15,27%,60%,1) 6%,
+      hsla(159,12%,29%,0.8) 6%,
+      hsla(159,12%,29%,0.8) 90%,
+      hsla(332,28%,54%,1) 90%
+    );
+}
+
+</style>
+
+  
+</head>
+
+<body>
+  
+  <div id="page-wrap">
+  <div id="zip-form-wrap">
+
+    <h1>Using Ziptastic</h1>
+    
+    <form action="#" method="post" class="fancy-form">
+
+      <fieldset>
+        <legend>Address</legend>
+
+        <div>
+          <div>
+            <input type="text" name="address-line-1" id="address-line-1" />
+            <label for="address-line-1">Street #1</label>
+          </div>
+        </div>
+        <div>
+          <div>
+            <input type="text" name="address-line-2" id="address-line-2" />
+            <label for="address-line-2">Street #2</label>
+          </div>
+        </div>
+        <div>
+          <div class="city-wrap">
+            <input type="text" name="city" id="city" />
+            <label for="city">City</label>
+          </div><!--
+        --><div class="state-wrap">
+            <input type="text" name="state" id="state" />
+            <label for="state">State</label>
+          </div><!--
+        --><div class="zip-wrap error">
+            <input type="text" pattern="[0-9]*" maxlength="5" required="" name="zip" id="zip" value="61012">
+            <label for="zip">Zip</label>
+            <p class="zip-error">Oopsy... that's not a real zip code.</p>
+          </div>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit">
+        </div>
+
+      </fieldset>
+
+    </form> 
+  </div>
+  </div>
+  
+
+</body>
+
+</html>

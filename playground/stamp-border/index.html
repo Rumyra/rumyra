@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="en-english" />
+        <meta name="author" content="Ruth John" />
+        <meta name="copyright" content="Built by Ruth John, for Rumyra Ltd, London, England, 2012" />
+        <title>CSS stamp border</title>
+        <style>
+            html {
+                background: -webkit-linear-gradient(
+                left,
+                hsla(0,0%,0%,0.2) 5%,
+                hsla(0,0%,0%,0.1) 40%,
+                hsla(0,0%,100%,0.1) 55%,
+                hsla(0,0%,100%,0.1) 65%,
+                hsla(0,0%,100%,0.1) 95%,
+                hsla(0,0%,0%,0.2) 100%
+                ),
+                -webkit-radial-gradient(circle, #966a39, #7e6b5d);
+                background: -moz-linear-gradient(
+                left,
+                hsla(0,0%,0%,0.2) 5%,
+                hsla(0,0%,0%,0.1) 40%,
+                hsla(0,0%,100%,0.1) 55%,
+                hsla(0,0%,100%,0.1) 65%,
+                hsla(0,0%,100%,0.1) 95%,
+                hsla(0,0%,0%,0.2) 100%
+                ),
+                -moz-radial-gradient(circle, #966a39, #7e6b5d);
+                background: -o-linear-gradient(
+                left,
+                hsla(0,0%,0%,0.2) 5%,
+                hsla(0,0%,0%,0.1) 40%,
+                hsla(0,0%,100%,0.1) 55%,
+                hsla(0,0%,100%,0.1) 65%,
+                hsla(0,0%,100%,0.1) 95%,
+                hsla(0,0%,0%,0.2) 100%
+                ),
+                -o-radial-gradient(circle, #966a39, #7e6b5d);
+                background: -ms-linear-gradient(
+                left,
+                hsla(0,0%,0%,0.2) 5%,
+                hsla(0,0%,0%,0.1) 40%,
+                hsla(0,0%,100%,0.1) 55%,
+                hsla(0,0%,100%,0.1) 65%,
+                hsla(0,0%,100%,0.1) 95%,
+                hsla(0,0%,0%,0.2) 100%
+                ),
+                -ms-radial-gradient(circle, #966a39, #7e6b5d);
+                background:
+                linear-gradient(
+                left,
+                hsla(0,0%,0%,0.2) 5%,
+                hsla(0,0%,0%,0.1) 40%,
+                hsla(0,0%,100%,0.1) 55%,
+                hsla(0,0%,100%,0.1) 65%,
+                hsla(0,0%,100%,0.1) 95%,
+                hsla(0,0%,0%,0.2) 100%
+                ),
+                radial-gradient(circle, #966a39, #7e6b5d);
+                -webkit-background-size:5px 5px, 4px 4px;
+                -moz-background-size:5px 5px, 4px 4px;
+                background-size:5px 5px, 4px 4px;
+            }
+            body, div, p {padding:0px; margin:0px; outline:none; border:none;}
+            body {font-family:'Helvetica Neue', 'arial', sans serif; font-size:62.5%; line-height:1.4; min-height:1000px;
+            }
+            .stamp {width:140px; height:160px; margin:20px auto; padding:10px; position:relative; font-size:1.6em; text-align:center; border-radius: 1px;}
+            #border-image {
+                background-color: hsla(350,80%,70%,1);
+                -webkit-background-clip: padding-box;
+                -moz-background-clip: padding-box;
+                background-clip: padding-box;
+                border:14px dotted white;
+                -webkit-border-image:url('stamp-border.png') 14 round;
+                -moz-border-image:url('stamp-border.png') 14 round;
+                border-image:url('stamp-border.png') 14 round;}
+            #multi-border {
+                background-color: hsla(240,80%,70%,1);
+                -webkit-background-clip: padding-box;
+                -moz-background-clip: padding-box;
+                background-clip: padding-box;
+                border: 6px dotted #806951;
+                padding: 26px;
+            }
+            #multi-border:before {
+                content: " ";
+                position: absolute;
+                z-index: -1;
+                top: -4px;
+                left: -4px;
+                right: -4px;
+                bottom: -4px;
+                border: 4px solid white;
+            }
+            #multi-border:after {
+                content: " ";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border: 16px solid white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="stamp" id="border-image">
+            <p>This stamp has a border as an image (border-image syntax is pretty crazy!)</p>
+        </div>
+        <div class="stamp" id="multi-border">
+            <p>This stamp is made with multiple borders, created by using the :before and :after psuedo elements.</p>
+        </div>
+        <div class="stamp" id="border-and-outline">
+                <p>OH MY GOD WE CAN USE OUTLINE (outline-offset)</p>
+        </div>
+        <div class="stamp" id="backgrounds">
+            <p>This stamp uses background gradients</p>
+        </div>
+    </body>
+</html>
