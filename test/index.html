@@ -22,7 +22,10 @@
 
 		<section>
 			<p>Your density is:</p>
-			<p><span class="feature-text" id="density"></span></p>
+			<p>
+				<span class="feature-text" id="density"></span>
+				<noscript>Wo, what? No Javascript, you should turn that on!</noscript>
+			</p>
 		</section>
 
 		<footer>
@@ -30,15 +33,18 @@
 		</footer>
 	</div>
 	<script>
-		var ratio = window.devicePixelRatio;
-		var densityText = 'Wo, what? No Javascript, you should turn that on!';
-		if (ratio === 'undefined') {
-			densityText = 'It seems that window.devicePixelRatio isn\'t supported by your browser... yet'
-		} else {
-			densityText = ratio+'dppx';
+		function discoverRatio() {
+			var densityText = 'It seems that window.devicePixelRatio isn\'t supported by your browser... yet';
+			var densityNode;
+
+			if (window.devicePixelRatio) {
+				densityText = window.devicePixelRatio+'dppx';
+			}
+
+			densityNode = document.createTextNode(densityText);
+			document.getElementById('density').appendChild(densityNode);
 		}
-		var densityAppend = document.createTextNode(densityText);
-		document.getElementById('density').appendChild(densityAppend);
+		discoverRatio();
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-7652340-5']);
