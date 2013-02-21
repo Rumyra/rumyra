@@ -1,0 +1,579 @@
+/*
+THIS FILE PULLS IN ALL SCSS FILES WE USE
+	This is the file that gets compiled for use in your app.
+
+	If you create any extras (such as ui elements), create a file for them & add them in here.
+
+	Read the comments - you will easily be able to find you're way around, there are also notes on the github page
+*/
+/*set colours, sizes, gradients (in variables & mixins) - any bits of code/styles that are reuseable thoughout the css*/
+/*
+CONTENTS
+
+1. VARIABLES
+    1.1 Colours
+    1.2 Typography
+    1.3 Very simple spacing
+*/
+/* 1. VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* 1.1 colours--------------------------------------------*/
+/*suggest changing to 'action colour'*/
+/*these are all little hacks :) means the main colour can be as light or saturated as you like*/
+/*White is main colour but with 98% lightness */
+/*Grey is main colour but with 5% saturation*/
+/*Black is main colour but with 5% brightness*/
+/* 1.2 typography ----------------------------------------*/
+@font-face {
+  font-family: 'museo_300regular';
+  src: url("fonts/museo-webfonts/exljbris_-_museo-300-webfont.eot");
+  src: url("fonts/museo-webfonts/exljbris_-_museo-300-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo-webfonts/exljbris_-_museo-300-webfont.woff") format("woff"), url("fonts/museo-webfonts/exljbris_-_museo-300-webfont.ttf") format("truetype"), url("fonts/museo-webfonts/exljbris_-_museo-300-webfont.svg#museo_300regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'museo_500regular';
+  src: url("fonts/museo-webfonts/exljbris_-_museo-500-webfont.eot");
+  src: url("fonts/museo-webfonts/exljbris_-_museo-500-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo-webfonts/exljbris_-_museo-500-webfont.woff") format("woff"), url("fonts/museo-webfonts/exljbris_-_museo-500-webfont.ttf") format("truetype"), url("fonts/museo-webfonts/exljbris_-_museo-500-webfont.svg#museo_500regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'museo_700regular';
+  src: url("fonts/museo-webfonts/exljbris_-_museo-700-webfont.eot");
+  src: url("fonts/museo-webfonts/exljbris_-_museo-700-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/museo-webfonts/exljbris_-_museo-700-webfont.woff") format("woff"), url("fonts/museo-webfonts/exljbris_-_museo-700-webfont.ttf") format("truetype"), url("fonts/museo-webfonts/exljbris_-_museo-700-webfont.svg#museo_700regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*this all needs refactoring*/
+/* 1.3 Very simple spacing---------------------------------*/
+/*this can me percentage, pixels or ems etc... used for space inbetween block elements*/
+/*used for left and right margins/padding usually in conjunction with $verticalSpace above*/
+/* 1.4 Nice design stuff/little shineys------------------------*/
+/*below is not the best way to do this - I need to refactor ~Ruth*/
+/*reset margins, padding, borders & outline. Sets HTML5 bock elements, also includes a couple of bits of normalize.css */
+/*1. BLANKING --------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+header, hgroup, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, time,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+figure, figcaption, video, audio, img,
+fieldset, form, label, legend, input, button, select,
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, canvas, nav, footer, aside,
+figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0; }
+
+/*a few little normalize bits (see above) for various browsers*/
+section, article, aside, footer, nav, header, hgroup, details, figure, figcaption, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+[hidden] {
+  display: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/*HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*headers, paragraphs, lists, formatting etc...*/
+/*
+CONTENTS
+
+1. Headers
+2. Paragraphs
+3. Inline Formatting
+4. Links
+5. Block Level Text Elements
+	a. lists
+	b. address, time
+	c. quotes
+	d. code
+
+*/
+/*1. HEADERS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+h1, h2, h3, h4, h5, h6 {
+  padding-bottom: 12px;
+  font-family: "museo_300regular", Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+h1 {
+  font-size: 2.4em; }
+
+h2 {
+  font-size: 1.8em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.2em; }
+
+h5 {
+  font-size: 1.2em; }
+
+h6 {
+  font-size: 1em; }
+
+/*2. PARAGRAPHS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+p {
+  margin: 6px 0px;
+  font-size: 1em;
+  line-height: 1.4; }
+
+.lede, p.lede {
+  font-size: 1.2em; }
+
+.feature-text {
+  font-weight: bold;
+  font-style: italic; }
+
+/*3. INLINE FORMATTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+strong, b {
+  font-weight: bold; }
+
+em, i, dfn, var {
+  font-style: italic; }
+
+dfn, abbr, abbr[title] {
+  border-bottom: 1px dotted #626a6d; }
+
+ins {
+  padding: 0px 3px;
+  text-decoration: none;
+  background-color: #eeefef;
+  border: 1px dotted #626a6d;
+  border-width: 0px 1px; }
+
+small {
+  font-size: 80%; }
+
+del {
+  text-decoration: line-through; }
+
+mark {
+  padding: 0px 3px;
+  background-color: #88c915; }
+
+kbd, code, samp, pre {
+  font-family: monospace;
+  font-size: 120%; }
+
+code {
+  padding: 0px 3px;
+  background-color: rgba(0, 18, 26, 0.3); }
+
+/*Prevents `sub` and `sup` affecting `line-height` in all browsers.*/
+sub, sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.8em;
+  line-height: 0; }
+
+sub {
+  top: -0.5em; }
+
+sup {
+  bottom: -0.25em; }
+
+/*changing direction of text dependent on language*/
+[dir="ltr"] bdi {
+  direction: rtl;
+  unicode-bidi: bidi-override; }
+
+[dir="rtl"] bdi {
+  direction: ltr;
+  unicode-bidi: bidi-override; }
+
+/*4. LINKS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+a {
+  color: #0090cf;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1em;
+  border-bottom: 2px solid #0090cf; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover, a:active {
+  color: #900fcf;
+  border-bottom: 2px solid #900fcf; }
+
+p a, h1 a, address a, ul a, ol a, dl a, menu a {
+  font-size: 100%; }
+
+/*5. BLOCK LEVEL TEXT ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*5a. lists, navs and menus*/
+ol, ul, dl, menu[type="list"] {
+  margin: 12px 2%; }
+
+ol {
+  list-style: lower-roman; }
+
+li, dt, dd {
+  font-size: 1em;
+  line-height: 1.4; }
+
+li {
+  padding-left: 1%; }
+
+dl > dd {
+  margin-bottom: 0px;
+  padding-left: 1%; }
+
+/*5b. Address & Time*/
+address, time {
+  display: block;
+  margin: 12px 0px;
+  font-size: 1.6em; }
+
+/*5c. Quotes*/
+blockquote {
+  margin: 12px 1%;
+  padding: 12px 1%;
+  quotes: '"';
+  background-color: rgba(0, 144, 207, 0.15); }
+
+blockquote:before, blockquote:after {
+  font-size: 2em; }
+
+blockquote:before {
+  content: '“'; }
+
+blockquote:after {
+  content: '”';
+  text-align: right; }
+
+/*5d. Code -> NB see 3. for <code> */
+pre {
+  margin: 12px 1%;
+  padding: 12px 1%;
+  color: #00121a;
+  text-shadow: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f5fcff; }
+
+/*forms*/
+/*
+CONTENTS
+
+1. Form, fieldset & legend
+2. Labels & inputs
+3. Feedback
+
+*/
+/*1. FORM, FIELDSET, LEGEND~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+form {
+  width: 300px;
+  margin: 0px auto; }
+
+fieldset {
+  margin-bottom: 12px; }
+
+legend {
+  font-size: 1.4em;
+  display: none; }
+
+/*2. LABELS AND INPUTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+label, input, select, textarea, button {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 6px 0px 12px;
+  font-family: "museo_300regular", Helvetica, Arial, sans-serif;
+  font-size: 1em; }
+
+/*Addresses Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.*/
+button, input {
+  line-height: normal; }
+
+label {
+  margin-bottom: 6px; }
+
+input, select, textarea {
+  padding: 6px 8px;
+  background-color: #00121a;
+  border-radius: 1px;
+  border: 3px solid #b0b5b8;
+  width: 100%;
+  box-sizing: border-box; }
+
+table input, table select, table textarea {
+  margin: 0px; }
+
+textarea {
+  vertical-align: top; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type=checkbox] {
+  width: 20px;
+  border: none; }
+
+input[type=color] {
+  width: 100px;
+  height: 100px; }
+
+input[type=number] {
+  width: 100px; }
+
+/*focus styles*/
+input:focus, select:focus, textarea:focus {
+  background-color: white;
+  /*border-color:$orange;*/ }
+
+/*required styles*/
+.required label:after {
+  display: inline-block;
+  content: '*';
+  padding-left: 0.5%; }
+
+/*error styles*/
+.valid-error input, .valid-error select, .valid-error textarea {
+  border-color: #d54726; }
+
+/*error message*/
+.form-error, .form-success {
+  padding: 0px 1%;
+  margin-bottom: 12px; }
+
+.form-error {
+  border: none;
+  box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 6px #d54726;
+  color: #b81453; }
+
+.form-success {
+  border: none;
+  box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 6px #88c915;
+  color: #88c915; }
+
+/*tables*/
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin: 12px 0px; }
+
+caption {
+  margin-bottom: 6px; }
+
+thead {
+  background-color: rgba(0, 144, 207, 0.6); }
+
+tr:nth-child(2n) {
+  background-color: #eeefef; }
+
+th, td {
+  text-align: left;
+  font-weight: normal;
+  font-size: 1em;
+  padding: 6px 1%; }
+
+th {
+  border: 0px solid #0090cf;
+  border-width: 3px 0px; }
+
+td {
+  border: 0px solid #b0b5b8;
+  border-bottom-width: 4px; }
+
+/*images, audio, video, canvas etc...*/
+/*media*/
+/*Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices.*/
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*navigation and menus*/
+nav ul, nav ol {
+  list-style: none; }
+
+menu[type="toolbar"] {
+  list-style: none; }
+
+menu[type="toolbar"] button {
+  background: none;
+  border: 4px solid #b0b5b8;
+  padding: 3px;
+  margin: 0px;
+  color: #f5fcff;
+  text-shadow: 1px 1px 0px white; }
+
+/*buttons*/
+/*button styles*/
+html input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+  display: inline-block;
+  background-color: #0090cf;
+  border: none;
+  box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 6px #0090cf;
+  padding: 8px 10px;
+  color: #00121a;
+  font-family: "museo_300regular", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: none;
+  text-align: center; }
+  html input[type="button"]:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  button:hover,
+  .button:hover {
+    background-color: #007eb5;
+    cursor: pointer;
+    color: #00121a; }
+
+/*no pointer on disabled buttons*/
+button[disabled], input[disabled] {
+  cursor: default; }
+
+/*buttons in places*/
+table button {
+  margin: 0px; }
+
+/*Special big buttons - just use this class*/
+.main-cta, input.main-cta {
+  padding: 12px 2%;
+  margin: 0px 0px 12px;
+  font-size: 1.4em; }
+
+.channel-articles {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 12px; }
+  .channel-articles ol {
+    list-style: none;
+    padding: 6px 0px;
+    margin: 6px;
+    width: 580px;
+    border: none;
+    box-shadow: 0px 0px 0px 3px white, 0px 0px 0px 6px #0090cf;
+    border: 2px solid #0090cf; }
+    .channel-articles ol li {
+      padding: 0px;
+      margin: 0px;
+      width: 27%;
+      box-sizing: border-box;
+      padding: 0px 1%;
+      display: inline-block; }
+      .channel-articles ol li figure {
+        position: relative;
+        width: 162px;
+        height: 162px;
+        overflow: hidden;
+        line-height: 0; }
+        .channel-articles ol li figure img {
+          width: 162px;
+          height: 162px; }
+        .channel-articles ol li figure figcaption {
+          position: absolute;
+          bottom: 0px;
+          padding: 3px 0.5%;
+          min-width: 100%;
+          background: rgba(245, 252, 255, 0.7);
+          line-height: 1.2;
+          color: #00121a;
+          text-shadow: 1px 1px 1px #f5fcff; }
+
+.channel-articles:nth-child(5n-3) ol {
+  width: 1140px; }
+
+/*PAGE LAYOUTS*/
+/*page layout, html and body elements, layout media queries*/
+html {
+  background: #00121a;
+  /*Prevents iOS text size adjust after orientation change, without disabling user zoom.*/
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 100%;
+  color: #f5fcff;
+  text-shadow: 1px 1px 0px white;
+  line-height: 1;
+  font-family: "museo_300regular", Helvetica, Arial, sans-serif;
+  background: -webkit-radial-gradient(50% 30%, circle closest-corner, rgba(0, 18, 26, 0.7) 0%, rgba(0, 18, 26, 0.5) 100%); }
+
+/*SITE STRUCTURE AND MEDIA QUERIES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*header & footer*/
+header[role="banner"], body > footer {
+  background-color: #0090cf;
+  background-image: -webkit-linear-gradient(left, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -webkit-linear-gradient(top, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -webkit-linear-gradient(top, rgba(0, 144, 207, 0.7), #0090cf);
+  background-image: -moz-linear-gradient(left, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -moz-linear-gradient(top, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -moz-linear-gradient(top, rgba(0, 144, 207, 0.7), #0090cf);
+  background-image: -o-linear-gradient(left, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -o-linear-gradient(top, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -o-linear-gradient(top, rgba(0, 144, 207, 0.7), #0090cf);
+  background-image: -ms-linear-gradient(left, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -ms-linear-gradient(top, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), -ms-linear-gradient(top, rgba(0, 144, 207, 0.7), #0090cf);
+  background-image: linear-gradient(left, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), linear-gradient(top, rgba(0, 18, 26, 0.1) 10%, rgba(0, 0, 0, 0) 11%), linear-gradient(top, rgba(0, 144, 207, 0.7), #0090cf);
+  background-size: 20px 20px, 20px 20px, cover;
+  color: #00121a;
+  text-shadow: 1px 1px 1px #f5fcff; }
+
+header[role="banner"] {
+  padding-top: 12px;
+  margin-bottom: 24px; }
+  header[role="banner"] h1 {
+    display: inline-block; }
+    header[role="banner"] h1 a {
+      border: none; }
+  header[role="banner"] a {
+    color: #00121a;
+    text-shadow: 1px 1px 1px #f5fcff;
+    border-bottom-color: #00121a; }
+    header[role="banner"] a:hover {
+      color: #cff0ff;
+      border-bottom-color: #b0b5b8; }
+  header[role="banner"] .lab-logo {
+    float: right;
+    margin-top: -4px; }
+
+body > footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0px; }
+  body > footer a {
+    float: right;
+    color: #00121a;
+    border-color: #00121a; }
+    body > footer a:hover {
+      color: #eeefef;
+      border-color: #eeefef; }
+
+.lab-logo {
+  display: inline-block;
+  text-indent: -999em;
+  width: 46px;
+  height: 45px;
+  background: transparent url("/assets/stylesheets/images/the-lab-logo.png") no-repeat left top;
+  border: none;
+  text-decoration: none; }
+
+.wrapper {
+  width: 96%;
+  margin: 0px 2%; }
+
+section[role="main"] {
+  overflow: hidden;
+  width: 60%;
+  float: left;
+  margin-left: 2%; }
+
+body > aside {
+  Width: 34%;
+  margin: 0px 2%;
+  float: left; }
