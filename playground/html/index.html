@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Some lesser known HTML elements</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Some lesser known HTML elements*</h1>
+			<p><small>*(no added styling)</small></p>
+		</header>
+		<main>
+			<article>
+				<header><h2>Formatting</h2></header>
+				<p>This is <mark>marked text</mark>. I should wrap <dfn title="define element">dfn tag</dfn> in <code>dfn</code> and give it a title. As I should with <abbr title="United Kingdom">UK</abbr> and the <code>abbr</code> tag - hover over UK.</p>
+				<p>So what happens if you want to give keyboard instructions like: Press <kbd>Enter</kbd>. Just use the <code>kbd</code> tag.<br /><code>samp</code> This element was intended to identify <samp>sample output from a computer program.</samp><br /><code>var</code>: A simple equation: <var>x</var> = <var>y</var> + 2</p>
+				<p>The <code>bdo</code> tag: <bdo dir="rtl">Don't cheat by reading this in a mirror!</bdo></p>
+				<p>Example using <code>ruby</code>
+					<ruby>
+					  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+					  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+					</ruby>
+				</p>
+			</article>
+
+			<article>
+				<header><h2>Forms</h2></header>
+				<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+					<label for="keygen">Keygen:</label>
+					<keygen name="keygen" challenge="challengestring" keytype="type" keyparams="pqg-params" /><br />
+					<label for="b">Output:</label>
+					0<input type="range" name="b" value="50" />100
+				  +<input type="range" name="a" value="50" />=
+				  <output name="result"></output><br />
+				  <label for="datalist">Datalist:</label>
+				  <input type="text" list="browsers" />
+					<datalist id="browsers">
+					 <option value="Chrome">
+					 <option value="Firefox">
+					 <option value="Internet Explorer">
+					 <option value="Opera">
+					 <option value="Safari">
+					</datalist>
+				</form>
+			</article>
+
+			<article>
+				<header><h2>Other</h2></header>
+				<details>
+          <summary>New <code>details</code> and <code>summary</code> elements</summary>
+          <p>So these are linked to some content, for instance a product may have 'details' related to it, so you would put them in the <code>details</code> tag, with a <code>summary</code> to begin with to sum the details up. Much like here.</p>
+        </details>
+        <p>Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.</p>
+            <p>He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.</p>
+            <p><progress value="70" max="100">70 %</progress></p>
+			</article>
+
+		</main>
+	</body>
+</html>
