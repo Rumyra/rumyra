@@ -9,31 +9,33 @@
         <meta name="description" content="Landing page for all thing's Rumyra. From here you can view her playground, CSS library, latest work, blog and contact her." />
         <title>This is Rumyra</title>
         <link rel="icon" href="/favicon.gif" type="image/gif" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-        <link 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script> 
     </head>
 
     <body>
 
-        <nav role="banner">
-            <a href="/">Home</a>
-            <a href="playground/index.html">Playground</a>
-            <!--<a href="">Library</a>-->
-            <a href="http://www.rumyrashead.com">Blog</a>
-            <!--<a href="">Inspiration</a>-->
-            <a href="http://www.ruthjohn.com">Portfolio</a>
-            <!--<a href="">Contact/Find</a>-->
-        </nav>
+        
 
         <header>
             <h1>Rumyra</h1>
             <p>Unicorn Trainer</p>
+            <!--LITTLE ICON VERSIONS OF LINE IMAGES-->
+            <nav>
+                <a href="#playground">Playground</a>
+                <a href="#rhead">Blog</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#social">Find</a>
+                <a href="#hello">Contact</a>
+            </nav>
         </header>
 
-        <section>
+        <section id="playground">
             <h2>Playground</h2>
             <p>Amazehopscotch of code</p>
+            <figure></figure>
         </section>
 
         <!--<section>
@@ -41,35 +43,69 @@
             <p>Shelves of code tit bits</p>
         </section>-->
 
-        <section>
-            <h2>Latest Article</h2>
-            <p>Rumyra's brain dribble</p>
+        <section id="rhead">
+            <h2>Rumyra's Head</h2>
+            <p>Thoughts & info, mostly brain dribble</p>
+            <figure></figure>
         </section>
 
-        <section>
+        <section id="portfolio">
             <h2>Portfolio</h2>
-            <p>Commercial work</p>
+            <p>Real life work & resume</p>
+            <figure></figure>
+        </section>
+
+        <section id="social">
+            <h2>Find Rumyra</h2>
+            <p>In case you lost her</p>
+            <ul class="social">
+                <li><a href="" rel="external">Twitter</a></li>
+                <li><a href="" rel="external">Github</a></li>
+                <li><a href="" rel="external">Delicious</a></li>
+                <li><a href="" rel="external">Linkedin</a></li>
+                <li><a href="" rel="external">Pinterest</a></li>
+            </ul>
+            <figure></figure>
+        </section>
+
+        <section id="hello">
+            <h2>Say Hello</h2>
+            <form>Contact form here</form>
+            <figure></figure>
         </section>
 
         <footer>
-            <section id="contact">
-                <h3>Contact</h3>
-                <form>
-                    <p>Contact form here</p>
-                </form>
-            </section>
-
-            <section id="find">
-                <h3>Find Rumyra (in case you lost her)</h3>
-                <ul>
-                    <li><a href="" rel="external">Twitter</a></li>
-                    <li><a href="" rel="external">Github</a></li>
-                    <li><a href="" rel="external">Delicious</a></li>
-                    <li><a href="" rel="external">Linkedin</a></li>
-                    <li><a href="" rel="external">Pinterest</a></li>
-                </ul>
-            </section>
+            <p>&copy; Copyright Ruth John 2013</p>
         </footer>
+
+
+        <script src="scripts/jquery.lazylinepainter-1.4.min.js"></script>  
+        <script src="scripts/lines.js"></script>  
+
+        <script type="text/javascript"> 
+            (function( $ ){  
+                $(document).ready(function(){
+
+                    // Setup your Lazy Line element.
+                    // see README file for more settings
+                    $('#playground figure').lazylinepainter({
+                            'svgData' : playground,
+                            'strokeWidth':2,  
+                            'strokeColor':'#dc908e',
+                            'onComplete' : function(){
+                                $(this).animate({'marginTop':60},500);
+                                }   
+                        }
+                    ) 
+
+                    // Paint your Lazy Line, that easy!
+                    $('#playground figure').lazylinepainter('paint');
+                })
+
+            })( jQuery );
+
+        </script>
+
 
     </body>
 </html>
