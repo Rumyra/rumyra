@@ -1,0 +1,74 @@
+body {
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:100%;
+    color:#eee;
+}
+header, audio, ul, #loading {
+    width: 40%;
+    display: block;
+    margin: 2% auto;
+    text-align:center;
+}
+h1 {
+    
+}
+ul li {
+    list-style:none; float:left;
+    width:40px; height:40px;
+    margin: 5%;
+    background-color: hsla(0,70%,50%,1);
+    background-image:-webkit-radial-gradient(center, rgba(0,0,0,0), rgba(0,0,0,1));
+    border-radius:20px;
+    box-shadow: inset 1px 1px 5px rgba(255,255,255,0.2), 1px 1px 5px rgba(0,0,0,0.8);
+}
+/*this would be easier with SASS*/
+ul li:nth-child(20n-18) {background-color:hsla(20,70%,50%,1);}
+ul li:nth-child(20n-17) {background-color:hsla(40,70%,50%,1);}
+ul li:nth-child(20n-16) {background-color:hsla(60,70%,50%,1);}
+ul li:nth-child(20n-15) {background-color:hsla(80,70%,50%,1);}
+ul li:nth-child(20n-14) {background-color:hsla(100,70%,50%,1);}
+ul li:nth-child(20n-13) {background-color:hsla(120,70%,50%,1);}
+ul li:nth-child(20n-12) {background-color:hsla(140,70%,50%,1);}
+ul li:nth-child(20n-11) {background-color:hsla(160,70%,50%,1);}
+ul li:nth-child(20n-10) {background-color:hsla(180,70%,50%,1);}
+ul li:nth-child(20n-9) {background-color:hsla(200,70%,50%,1);}
+ul li:nth-child(20n-8) {background-color:hsla(220,70%,50%,1);}
+ul li:nth-child(20n-7) {background-color:hsla(240,70%,50%,1);}
+ul li:nth-child(20n-6) {background-color:hsla(260,70%,50%,1);}
+ul li:nth-child(20n-5) {background-color:hsla(280,70%,50%,1);}
+ul li:nth-child(20n-4) {background-color:hsla(300,70%,50%,1);}
+ul li:nth-child(20n-3) {background-color:hsla(320,70%,50%,1);}
+ul li:nth-child(20n-2) {background-color:hsla(340,70%,50%,1);}
+
+#loading {
+    width: 20%;
+    padding: 1%;
+    border-radius: 10px;
+    opacity: 0.9;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+
+
+#loading a {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+    text-decoration: none;
+}
+
+#loading p{
+    color: #fff;
+    font-size: 18px;
+}
+
+#waveform { 
+    display: block;
+    margin: 100px auto;
+}
+
+
