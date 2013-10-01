@@ -56,8 +56,9 @@
     });
   dancer.bind( 'update', function() {
 
-    for (var i = 0; i <= 20; i++) {
-      var frequency = this.getFrequency(i*5);
+    for (var i = 0; i <= 39; i++) {
+      var frequency = this.getFrequency(i);
+      // console.log(frequency);
       var frequency = frequency*100;
       if (frequency > 1) {
         switchedLight(lights[i],true);

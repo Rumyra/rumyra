@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href='dancer.css' rel='stylesheet' type='text/css' />
+		<link href='dancer.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<header>
-			<h1>Make your CSS dance</h1>
-			<p>Please use a modern browser</p>
+			<section>
+				<h1>Make your CSS dance</h1>
+				<p>Please use a modern browser</p>
+				<p>Featuring Guilt by <a href="http://heartfieldmusic.blogspot.co.uk/">Simon Heartfield</a></p>
+			</section>
+
+			<section>
+				<audio id="audio" controls="controls">
+					<source src="Guilt.mp3" type="audio/mpeg; codecs='mp3'" />
+				</audio>
+				<div id="loading">Loading . . .</div>
+			</section>
+			<div class="values">
+				<p id="spectrum">spectrum</p>
+				<p id="wave">wave</p>
+				<p id="frequency">frequency</p>
+			</div>
 		</header>
 		
-		<audio id="audio">
-			<source src="Guilt.mp3" type="audio/mpeg; codecs='mp3'" />
-		</audio>
-		<div id="loading">Loading . . .</div>
-		<p id="spectrum">spectrum</p>
-			<p id="wave">wave</p>
-			<p id="frequency">frequency</p>
+		
 		<!--<canvas id="waveform" height="600" width="1024"></canvas>-->
 		<ul id="lights">
 			<li></li>
@@ -28,6 +37,7 @@
 			<li></li>
 			<li></li>
 			<li></li>
+
 			<li></li>
 			<li></li>
 			<li></li>
@@ -38,6 +48,29 @@
 			<li></li>
 			<li></li>
 			<li></li>
+
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+
 		</ul>
 		<!-- Dancer.js -->
 		<script src="js/dancer.js"></script>
