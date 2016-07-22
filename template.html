@@ -2,116 +2,193 @@
 <html class="no-js" lang="en">
 
 <head>
-  <!--char set (lang above)-->
   <meta charset="utf-8">
-
-  <!--device/browser shizzle-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--meta content-->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+  <!--meta content-->
+  
   <meta name="author" content="Ruth John (@rumyra)">
-  <meta name="dcterms.rightsHolder" content="Ruth John for Rumyra Ltd, United Kingdom, 2015">
-  <meta name="keywords" content="<%= @keywords %>">
-  <meta name="description" content="<%= @description %>">
-  <title>Rumyra | aka Ruth John</title>
+  <meta name="dcterms.rightsHolder" content="Built by Ruth John, United Kingdom, 2015">
+  <title><%= @title %></title>
+  <meta name="description" content="">
 
-  <!--Stylesheets (include as necessary)-->
-  <!--[if lte IE 9]>
-  <link rel="stylesheet" href="ie.css" type="text/css" media="screen"/>
-  <![endif]-->
+  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
 
-  <!--<%= stylesheet_link_tag "application", "all", "pygments" %>
-  <%= javascript_include_tag  "all" %>-->
-
-  <style type="text/css">
-    .work-list {
-      width:20vw;
-    }
-  </style>
+  <!--include if you want modenizr (rest of scripts just before </body>)
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  -->
 </head>
 
   <body class="<%= page_classes %>"><div>
 
-    <section class="banner">
-      Social Links Here - Link to Blog?
-    </section>
-
-    <header role="main">
-      
-      <h1><a href="/" rel="internal" title="Link back to the home of Rumyra's Head">Rumyra</a></h1>
-      <p class="title-sub">(roo-my-rah))</p>
-
-      <nav role="main">
-        <a href="blog">About</a>
-        <a href="work">Work</a> <!-- website, app, speaking, article, installation, community -->
-        <!-- <a href="playground">Playground</a> -->
-        <a href="mailto:sayhello@rumyrashead.com">Contact</a>
-        <a href="blog">Blog</a>
+    <header>
+      <h1>Rumyra</h1>
+      <p class="lede">/ruː'maırɑː/</p>
+      <nav>
+        <a href="/#about">About</a>
+        <a href="/#portfolio">My Things</a>
+        <a href="/contact">Contact</a>
       </nav>
+      <!-- <p>Google dev bio?</p>
+      <p>CV? or Linked in for previous work experience</p> -->
     </header>
 
     <main>
+
       <div id="about">
-        <p class="lede">Ruth John has been</p>
-        <p>Google dev bio?</p>
-        <p>CV? or Linked in for previous work experience</p>
+        <h2>About</h2>
+        <p class="lede">Ruth John is an award nominated digital artist, web consultant, speaker and writer, with 15 years of experience in the digital industry.</p>
+        <p>She's a Google Developer Expert, is on the board of directors for Bath Digital Festival and in her career has worked for companies such as o2 (Telefonica) and BSkyB, and clients such as the BBC, NBC, Cancer Research UK, Henekien and Channel 4 among others.</p>
+        <p>Check out her 'Things' to see her range of previous work, digital installations, talk engagements and published articles</p>
+        <p>Ruth also belongs to the <code>{ LiveJS }</code> collective, which brings audio and visual code to life, in live performances across the globe.</p>
       </div>
 
-      <div id="work">
-        <!-- we don't need this for the home page -->
-        <section class="work-filter">
-          <h5>Filter by:</h5>
-          <nav>
-            <a href="">Websites</a>
-            <a href="">Apps</a>
-            <a href="">Speaking</a>
-            <a href="">Articles</a>
-            <a href="">Installations</a>
-            <a href="">Community</a>
-          </nav>
+      <div id="portfolio">
+      <h2>My Things</h2>
+        <section class="portfolio-filter">
+          <form>
+            <fieldset><legend>Work filter</legend>
+              <div class="form-field">
+                  <label for="select-element">Select work:</label>
+                  <select>
+                    <option>Website/App</option>
+                    <option>Speaking</option>
+                    <option>Writing</option>
+                    <option>Installation</option>
+                    <option>Community</option>
+                    <option>Design</option>
+                  </select>
+              </div>
+            </fieldset>
+          </form>
         </section>
+
+        <!--
+        for each work
+        if category selected show all from cat
+        else show featured
+        -->
         
-        <section class="work-featured">
+        <section class="portfolio-list">
           <!-- pull out featured work -->
-          <ul class="work-list">
-            <li><!-- click to open & close or animation for more info-->
-              <h4>WebVJ</h4>
-              <p>A few internet friends and I started a collective, focusing on using web technologies to create audio/visual installations and performances.</p>
+          <ul>
+            <li class="projectType" data-portitem="uniqueIDhere"><!-- click to open & close or animation for more info-->
+              <picture>
+                <!-- hero image -->
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
                 <img src="media/work/webvj.png" />
               </picture>
-              <!--if -->
-              <video></video>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
             </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType featured" data-portitem="uniqueIDhere"><!-- click to open & close or animation for more info-->
+              <div class="portitem-info">
+                <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+                <p>desc A few internet friends and I started a collective, focusing on using web technologies to create audio/visual installations and performances.</p>
+                <p class="portitem"><a href="">External link</a></p>
+              </div>
+              <div class="portitem-media"></div>
+                <picture>
+                  <!-- hero image -->
+                  <img src="media/work/webvj.png" />
+                </picture>
+                <section class="portitem-thumbs">
+                  <img src="media/work/webvj.png" width="100" height="100" />
+                  <img src="media/work/webvj.png" width="100" height="100" />
+                  <img src="media/work/webvj.png" width="100" height="100" />
+                </section>
+                <section class="portitem-spacetime">
+                  
+                </section>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
+            <li class="projectType" data-portitem="uniqueIDhere">
+              <picture>
+                <img src="media/work/webvj.png" />
+              </picture>
+              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
+              <p><time datetime="2004-05-23">May '04</time></p>
+            </li>
+
           </ul>
         </section>
-        <a href="">See all work -></a>
       </div>
 
       <div id="contact">
-        Form
-        Mailto link
-        Text
-        Tweet
+        <h2>Get in Touch</h2>
+        <p class="lede">There's plenty of ways to get in touch. Just say 'Hi' on <a href="https://twitter.com/Rumyra">Twitter</a>. You can email me; <a href="mailto:hello@rumyra.com">hello@rumyra.com</a>.</p>
+        <p>Or if it's easier you can fill out the form opposite.</p>
+        <p>If you want to find out more about me, I'm pretty much <i>Rumyra</i> on everything. You can also text ... if you're so inclined and I can easily drop you the latest copy of my CV too if that's you thang.</p>
       </div>
 
     </main>
 
     <footer>
+    <p><span>© Designed and built by Ruth John 2016</span></p>
     <ul class="nav-social">
       google plus
       google expert
+      CV
+      LinkdIn
       <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-before i-twitter">Follow @rumyra on Twitter</a></li>
       <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-before i-tags">Rumyra on Lanyrd</a></li>
       <li><a href="http://www.github.com/rumyra" rel="external" class="icon-before i-github">Rumyra on Github</a></li>
       <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-before i-codepen">Rumyra on Codepen</a></li>
-      <li><span class="icon-before i-mobile">Say hello by text on +441287 244048</span></li>
+      <!-- <li><span class="icon-before i-mobile">Say hello by text on +441287 244048</span></li> -->
     </ul>
-    <p><span>© Rumyra's Head 2015</span><!--<a href="http://www.ruthjohn.com" rel="external">-->Designed by Ruth John</p>
-    
   </footer>
   </div>
 
