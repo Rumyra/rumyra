@@ -1,0 +1,117 @@
+//CONTENTS
+
+// 1. html & body
+// 2. Site structure
+//     2.1 Main header, aside and footer
+//     2.2 Main content container
+
+
+// 1. HTML & BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+html { background-color: $htmlBkGrnd; }
+body {
+  overflow: auto;
+  font-family: $font;
+  font-size: 100%;
+  color: $primaryFontColour;
+  line-height: 1.4;
+  @include at-least($screenXlarge) { font-size: 112%; }
+  @include until($screenMedium) { font-size: 90%; }
+  @include until($screenSmall) { font-size: 84%; }
+}
+// remember to define focus styles!
+:focus { outline: 0; }
+
+// 2. SITE STRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// 2.1 Main header, aside & footer
+// Default layout is full width add .layout-sidebar for large screens to have side nav
+div[class^="page-"] {
+  display: flex; flex-direction: column;
+  width: 100vw; height: 100vh;
+  margin: 0px; padding: 0px;
+  box-sizing: border-box;
+  border:20px solid $white;
+}
+header[role="main"],
+footer[role="main"] {
+  padding: $verticalSpace*2 $gutter*2 $verticalSpace;
+  box-sizing:border-box;
+  flex: none;
+}
+
+header[role="main"] {
+  overflow: hidden;
+  & > section {
+    float:left;
+    h1 {margin-bottom:0px;}
+    p {margin:0px;}
+  }
+  & > nav {
+    float:right; display:flex;
+    width: 40%;
+    // a {flex-item:space-around;}
+  }
+}
+
+footer[role="main"] {
+  width: 100%;
+  padding: $verticalSpace $gutter*2 $verticalSpace*2;
+  p, ul {
+      display: inline-block;
+      text-align: right;
+  }
+  p {padding-right: $verticalSpace;}
+}
+
+.content {
+  flex: 1 0 auto;
+  padding: $verticalSpace $gutter 0px;
+}
+.content::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: $verticalSpace;
+  height: 0px;
+  visibility: hidden;
+}
+
+/*2.2 Main content container*/
+
+
+// @include at-least($screenLarge) {
+
+//   .layout-sidebar {
+//     header[role="banner"],
+//     body > aside {
+//       width: 32%;
+//       float: left;
+//       text-align: right;
+//     }
+//     header[role="banner"] {
+//       nav {
+//         //due to @extends not being allowed within @includes this is just a copy from nav-block-vertical.
+//         & > ul {
+//           background-color: transparent;
+//           & > li > a {
+//             background-color: $blockNavBackgroundColour;
+//             &:hover { background-color: darken($blockNavBackgroundColour, 20%); }
+//           }
+//         }
+//         li {
+//           display: block;
+//           margin-bottom: $verticalSpace/4;
+//         }
+//         .nav-sub {
+//           display: block;
+//           position: static;
+//           border-width: 0px;
+//         }
+//       }
+//     }
+
+//     section[role="main"] {
+//       width: 67.5%;
+//       float: right;
+//     }
+//   }
+// }
+

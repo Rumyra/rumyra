@@ -1,0 +1,53 @@
+// Contents
+// 0) page common
+// 1) home
+// 2) about
+// 3) portfolio
+// 4) contact
+
+// div[class^="page-"] {
+//   margin:0px; padding:$verticalSpace $gutter;
+//   border: 2px solid $white; border-width: 2px 0px;
+//   min-height: 86vh;
+// }
+.content {
+  border:1px solid $white;
+  border-width: 1px 0px;
+}
+
+// home
+.page-home {
+  background-color: $pageHomeColour;
+}
+
+// about
+.page-about {
+  background-color: $pageAboutColour;
+}
+
+// portfolio
+.page-portfolio {
+  background-color: $pageThingsColour;
+}
+.portfolio-list {
+  ul {
+    display: flex;  
+  }
+  li {
+    width: 13vw; height:13vw;
+    margin: 2vw;
+    position: relative;
+    img {
+      position: absolute;
+      left: 0px; top: 0px;
+    }
+    &.featured {
+      width: 40vw; height: 30vw;
+    }
+  }
+}
+
+// contact
+.page-contact {
+  background-color: $pageContactColour;
+}

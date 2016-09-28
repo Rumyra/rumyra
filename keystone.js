@@ -12,7 +12,7 @@ var handlebars = require('express-handlebars');
 
 keystone.init({
 	'name': 'rumyra.com',
-	'brand': 'rumyra.com',
+	'brand': 'rumyra.com cms',
 
 	'sass': 'public',
 	'static': 'public',

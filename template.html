@@ -16,42 +16,95 @@
   <title><%= @title %></title>
   <meta name="description" content="">
 
-  <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet" media="screen" />
-  <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" />
+  <link type="text/css" href="public/whitepaper/styles/application.css" rel="stylesheet" media="screen" />
+  <!-- <link type="text/css" href="/assets/stylesheets/styleguide_specifics.css" rel="stylesheet" media="screen" /> -->
 
   <!--include if you want modenizr (rest of scripts just before </body>)
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
   -->
+  <style type="text/css">
+    body > div > div[class^="page-"] {display: none;}
+    body > div > div.page-contact {display: flex;}
+  </style>
 </head>
 
   <body class="<%= page_classes %>"><div>
 
-    <header>
-      <h1>Rumyra</h1>
-      <p class="lede">/ruː'maırɑː/</p>
-      <nav>
-        <a href="/#about">About</a>
-        <a href="/#portfolio">My Things</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <!-- <p>Google dev bio?</p>
-      <p>CV? or Linked in for previous work experience</p> -->
-    </header>
+    <div class="page-home" data-page="home">
+      <header role="main">
+        <section>
+          <h1><a href="/">Rumyra</a></h1>
+          <p class="lede">&#11005;&nbsp;ru&#166;&#8242;ma&#305; r&#945;&#166;&nbsp;&#11005;</p>
+        </section>
+        <nav>
+          <a href="/#about">About</a>
+          <a href="/#portfolio">My Things</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <footer role="main">
+        <p><span>&copy; 2016 Designed and built by Ruth John</span></p>
+        <ul class="nav-social">
+          <li><a href="https://plus.google.com/u/0/+RuthJohn" class="icon-make i-google">Ruth John on Google Plus</a></li>
+          <li><a href="" class="icon-make i-linkdin">Ruth John on LinkdIn</a></li>
+          <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-make i-twitter">Follow @rumyra on Twitter</a></li>
+          <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-make i-tags">Rumyra on Lanyrd</a></li>
+          <li><a href="http://www.github.com/rumyra" rel="external" class="icon-make i-github">Rumyra on Github</a></li>
+          <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-make i-codepen">Rumyra on Codepen</a></li>
+          <!-- <li><span class="icon-make i-mobile">Say hello by text on +441287 244048</span></li> -->
+        </ul>
+      </footer>
+    </div>
 
-    <main>
-
-      <div id="about">
+    <div class="page-about" data-page="about">
+      <header role="main">
+        <section>
+          <h1><a href="/">Rumyra</a></h1>
+          <p class="lede">&#11005;&nbsp;ru&#166;&#8242;ma&#305; r&#945;&#166;&nbsp;&#11005;</p>
+        </section>
+        <nav>
+          <a href="/#about">About</a>
+          <a href="/#portfolio">My Things</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <section class="content">
         <h2>About</h2>
         <p class="lede">Ruth John is an award nominated digital artist, web consultant, speaker and writer, with 15 years of experience in the digital industry.</p>
-        <p>She's a Google Developer Expert, is on the board of directors for Bath Digital Festival and in her career has worked for companies such as o2 (Telefonica) and BSkyB, and clients such as the BBC, NBC, Cancer Research UK, Henekien and Channel 4 among others.</p>
+        <p>She's a <a href="https://developers.google.com/experts/people/ruth-john">Google Developer Expert</a>, is on the board of directors for Bath Digital Festival and in her career has worked for companies such as o2 (Telefonica) and BSkyB, and clients such as the BBC, NBC, Cancer Research UK, Henekien and Channel 4 among others.</p>
         <p>Check out her 'Things' to see her range of previous work, digital installations, talk engagements and published articles</p>
         <p>Ruth also belongs to the <code>{ LiveJS }</code> collective, which brings audio and visual code to life, in live performances across the globe.</p>
-      </div>
+      </section>
+      <footer role="main">
+        <p><span>&copy; 2016 Designed and built by Ruth John</span></p>
+        <ul class="nav-social">
+          <li><a href="https://plus.google.com/u/0/+RuthJohn" class="icon-make i-google">Ruth John on Google Plus</a></li>
+          <li><a href="" class="icon-make i-linkdin">Ruth John on LinkdIn</a></li>
+          <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-make i-twitter">Follow @rumyra on Twitter</a></li>
+          <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-make i-tags">Rumyra on Lanyrd</a></li>
+          <li><a href="http://www.github.com/rumyra" rel="external" class="icon-make i-github">Rumyra on Github</a></li>
+          <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-make i-codepen">Rumyra on Codepen</a></li>
+          <!-- <li><span class="icon-make i-mobile">Say hello by text on +441287 244048</span></li> -->
+        </ul>
+      </footer>
+    </div>
 
-      <div id="portfolio">
-      <h2>My Things</h2>
+    <div class="page-portfolio" data-page="portfolio">
+      <header role="main">
+        <section>
+          <h1><a href="/">Rumyra</a></h1>
+          <p class="lede">&#11005;&nbsp;ru&#166;&#8242;ma&#305; r&#945;&#166;&nbsp;&#11005;</p>
+        </section>
+        <nav>
+          <a href="/#about">About</a>
+          <a href="/#portfolio">My Things</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <section class="content">
+        <h2>My Things</h2>
         <section class="portfolio-filter">
-          <form>
+          <form class="form-small">
             <fieldset><legend>Work filter</legend>
               <div class="form-field">
                   <label for="select-element">Select work:</label>
@@ -80,7 +133,7 @@
             <li class="projectType" data-portitem="uniqueIDhere"><!-- click to open & close or animation for more info-->
               <picture>
                 <!-- hero image -->
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -88,7 +141,7 @@
 
             <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -96,15 +149,7 @@
 
             <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
-                <img src="media/work/webvj.png" />
-              </picture>
-              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
-              <p><time datetime="2004-05-23">May '04</time></p>
-            </li>
-
-            <li class="projectType" data-portitem="uniqueIDhere">
-              <picture>
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -119,7 +164,7 @@
               <div class="portitem-media"></div>
                 <picture>
                   <!-- hero image -->
-                  <img src="media/work/webvj.png" />
+                  <img src="media/work/webvj.png" height="100" width="100" />
                 </picture>
                 <section class="portitem-thumbs">
                   <img src="media/work/webvj.png" width="100" height="100" />
@@ -133,7 +178,7 @@
 
             <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -141,7 +186,7 @@
 
             <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -149,15 +194,7 @@
 
             <li class="projectType" data-portitem="uniqueIDhere">
               <picture>
-                <img src="media/work/webvj.png" />
-              </picture>
-              <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
-              <p><time datetime="2004-05-23">May '04</time></p>
-            </li>
-
-            <li class="projectType" data-portitem="uniqueIDhere">
-              <picture>
-                <img src="media/work/webvj.png" />
+                <img src="media/work/webvj.png" height="100" width="100" />
               </picture>
               <h4>title some fuhdg gjod fgjog fdj ffdsf</h4>
               <p><time datetime="2004-05-23">May '04</time></p>
@@ -165,32 +202,63 @@
 
           </ul>
         </section>
-      </div>
+      </section>
+      <footer role="main">
+        <p><span>&copy; 2016 Designed and built by Ruth John</span></p>
+        <ul class="nav-social">
+          <li><a href="https://plus.google.com/u/0/+RuthJohn" class="icon-make i-google">Ruth John on Google Plus</a></li>
+          <li><a href="" class="icon-make i-linkdin">Ruth John on LinkdIn</a></li>
+          <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-make i-twitter">Follow @rumyra on Twitter</a></li>
+          <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-make i-tags">Rumyra on Lanyrd</a></li>
+          <li><a href="http://www.github.com/rumyra" rel="external" class="icon-make i-github">Rumyra on Github</a></li>
+          <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-make i-codepen">Rumyra on Codepen</a></li>
+          <!-- <li><span class="icon-make i-mobile">Say hello by text on +441287 244048</span></li> -->
+        </ul>
+      </footer>
+    </div>
 
-      <div id="contact">
+    <div class="page-contact" data-page="contact">
+      <header role="main">
+        <section>
+          <h1><a href="/">Rumyra</a></h1>
+          <p class="lede">&#11005;&nbsp;ru&#166;&#8242;ma&#305; r&#945;&#166;&nbsp;&#11005;</p>
+        </section>
+        <nav>
+          <a href="/#about">About</a>
+          <a href="/#portfolio">My Things</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <section class="content">
         <h2>Get in Touch</h2>
         <p class="lede">There's plenty of ways to get in touch. Just say 'Hi' on <a href="https://twitter.com/Rumyra">Twitter</a>. You can email me; <a href="mailto:hello@rumyra.com">hello@rumyra.com</a>.</p>
         <p>Or if it's easier you can fill out the form opposite.</p>
         <p>If you want to find out more about me, I'm pretty much <i>Rumyra</i> on everything. You can also text ... if you're so inclined and I can easily drop you the latest copy of my CV too if that's you thang.</p>
-      </div>
+      </section>
+      <footer role="main">
+        <p><span>&copy; 2016 Designed and built by Ruth John</span></p>
+        <ul class="nav-social">
+          <li><a href="https://plus.google.com/u/0/+RuthJohn" class="icon-make i-google">Ruth John on Google Plus</a></li>
+          <li><a href="" class="icon-make i-linkdin">Ruth John on LinkdIn</a></li>
+          <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-make i-twitter">Follow @rumyra on Twitter</a></li>
+          <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-make i-tags">Rumyra on Lanyrd</a></li>
+          <li><a href="http://www.github.com/rumyra" rel="external" class="icon-make i-github">Rumyra on Github</a></li>
+          <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-make i-codepen">Rumyra on Codepen</a></li>
+          <!-- <li><span class="icon-make i-mobile">Say hello by text on +441287 244048</span></li> -->
+        </ul>
+      </footer>
+    </div>
 
-    </main>
-
-    <footer>
-    <p><span>© Designed and built by Ruth John 2016</span></p>
-    <ul class="nav-social">
-      google plus
-      google expert
-      CV
-      LinkdIn
-      <li><a href="http://www.twitter.com/rumyra" rel="external" class="icon-before i-twitter">Follow @rumyra on Twitter</a></li>
-      <li><a href="http://lanyrd.com/profile/rumyra/" rel="external" class="icon-before i-tags">Rumyra on Lanyrd</a></li>
-      <li><a href="http://www.github.com/rumyra" rel="external" class="icon-before i-github">Rumyra on Github</a></li>
-      <li><a href="http://codepen.io/Rumyra" rel="external" class="icon-before i-codepen">Rumyra on Codepen</a></li>
-      <!-- <li><span class="icon-before i-mobile">Say hello by text on +441287 244048</span></li> -->
-    </ul>
-  </footer>
+      
   </div>
+
+  <script type="text/javascript" src="public/whitepaper/js/app.js"></script>
+
+  <script type="text/javascript">
+    
+    var pageController = new PageController(document.getElementsByTagName('div')[0]);
+    pageController.changePage();
+  </script>
 
 </body>
 </html>

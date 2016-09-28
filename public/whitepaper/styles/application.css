@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* reset margins, padding, borders & outline. Sets HTML block elements, also includes a couple of bits of normalize.css */
+html, body, div, span, applet, object, iframe,
+header, hgroup, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, time,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+figure, figcaption, video, audio, img,
+fieldset, form, label, legend, input, button, select,
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, canvas, nav, footer, aside,
+figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+section, article, aside, footer, nav, header, hgroup, details, figure, figcaption, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+/*Prevents iOS text size adjust after orientation change, without disabling user zoom.*/
+html {
+  -webkit-text-size-adjust: 100%; }
+
+[hidden] {
+  display: none; }
+
+.hide-font {
+  color: transparent;
+  font-size: 0px;
+  text-transform: none;
+  text-decoration: none; }
+
+/* set colours, fonts, sizes & breakpoints */
+@font-face {
+  font-family: "Font Awesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/fontAwesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/fontAwesome/fontawesome-webfont.woff") format("woff"), url("../fonts/fontAwesome/fontawesome-webfont.otf") format("opentype"), url("../fonts/fontAwesome/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontAwesome/fontawesome-webfont.svg#Font Awesome") format("svg"); }
+
+@font-face {
+  font-family: "Museo";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/museo/exljbris_-_museo-500-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museo/exljbris_-_museo-500-webfont.woff") format("woff"), url("../fonts/museo/exljbris_-_museo-500-webfont.otf") format("opentype"), url("../fonts/museo/exljbris_-_museo-500-webfont.ttf") format("truetype"), url("../fonts/museo/exljbris_-_museo-500-webfont.svg#Museo") format("svg"); }
+
+/* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* headers, paragraphs, lists, formatting etc... */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75em;
+  font-weight: normal;
+  line-height: 1.3; }
+
+h1, h2, h3, h4 {
+  font-family: sans-serif; }
+
+h1 {
+  font-size: 2.6em; }
+
+h2 {
+  font-size: 2.2em; }
+
+h3 {
+  font-size: 1.9em; }
+
+h4 {
+  font-size: 1.6em; }
+
+h5 {
+  font-size: 1.4em; }
+
+h6 {
+  font-size: 1.2em; }
+
+p {
+  margin: 0.75em 0px;
+  font-size: 1em;
+  line-height: 1.5; }
+
+.lede, p.lede {
+  font-size: 1.2em; }
+
+.feature-text {
+  font-weight: bold;
+  font-style: italic; }
+
+strong, b {
+  font-weight: bold; }
+
+em, i, dfn, var {
+  font-style: italic; }
+
+dfn, abbr, abbr[title], ins, mark {
+  border-bottom: 1px dotted; }
+
+small {
+  font-size: 84%; }
+
+del {
+  text-decoration: line-through; }
+
+kbd, code, samp, pre {
+  font-family: monospace;
+  font-size: 120%; }
+
+/*Prevents `sub` and `sup` affecting `line-height` in all browsers.*/
+sub, sup {
+  position: relative;
+  font-size: 84%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/*changing direction of text dependent on language*/
+[dir="ltr"] bdi {
+  direction: rtl;
+  unicode-bidi: bidi-override; }
+
+[dir="rtl"] bdi {
+  direction: ltr;
+  unicode-bidi: bidi-override; }
+
+a {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 1em;
+  text-decoration: none; }
+
+p a, address a, ul a, ol a, dl a, menu a {
+  font-size: 100%; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  border: none;
+  font-size: 100%; }
+
+a:hover, a:active, a:visited {
+  border-bottom-width: 0px;
+  color: white; }
+
+a:focus {
+  outline: thin dotted; }
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: white; }
+
+.content a {
+  padding: 0px 0.375em;
+  background-image: linear-gradient(to bottom, transparent 50%, white 51%);
+  background-size: 100% 200%;
+  background-position: 0 100%; }
+  .content a:hover {
+    background-position: 0 10%;
+    transition: background-position 200ms ease-out; }
+
+ol, ul, dl, menu[type="list"] {
+  margin: 1.5em 3em; }
+
+ol {
+  list-style: lower-roman; }
+
+li, dt, dd {
+  font-size: 1em;
+  line-height: 1.5; }
+
+dt {
+  font-weight: bold; }
+
+li, dl > dd {
+  margin: 0.75em 0px;
+  padding-left: 0.75em; }
+
+address, time {
+  display: block;
+  margin: 1.5em 0px; }
+
+blockquote {
+  margin: 1.5em 1.5em;
+  padding: 1.5em 1.5em;
+  background-color: rgba(255, 255, 255, 0.5);
+  quotes: '"'; }
+  blockquote:before {
+    float: left;
+    content: '“';
+    font-size: 3em; }
+  blockquote:after {
+    content: attr(cite);
+    display: block;
+    font-size: 84%;
+    text-align: right; }
+
+pre {
+  margin: 1.5em 1.5em;
+  padding: 1.5em 1.5em;
+  background-color: #4b494b;
+  font-size: 100%;
+  color: white;
+  line-height: 1.5;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+  pre code {
+    background: none; }
+
+/* forms */
+form {
+  width: 100%; }
+
+@media screen and (min-width: 860px) {
+  .form-small {
+    width: 50%;
+    margin: 0px auto; } }
+
+fieldset {
+  margin-bottom: 1.5em; }
+
+legend {
+  display: none;
+  font-size: 1.4em; }
+
+.form-field {
+  width: 100%; }
+  @media screen and (min-width: 860px) {
+    .form-field {
+      width: 48%;
+      float: left; }
+      .form-field:nth-of-type(2n-1) {
+        margin-right: 4%; } }
+
+@media screen and (min-width: 860px) {
+  .form-small .form-field {
+    width: 100%;
+    float: none;
+    margin-right: 0px; } }
+
+label, input, select, textarea, button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: 0.75em 0px 1.5em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em; }
+  @media screen and (max-width: 859px) {
+    label, input, select, textarea, button {
+      margin: 0.375em 0px 0.75em; } }
+
+/*Addresses Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet.*/
+button, input {
+  line-height: normal; }
+
+label {
+  width: 100%;
+  margin-bottom: 0.75em; }
+  @media screen and (max-width: 859px) {
+    label {
+      margin-bottom: 0.375em; } }
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.375em 0.5em;
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 1px; }
+
+select option {
+  padding: 0.75em 1em; }
+
+textarea {
+  vertical-align: top; }
+
+table input, table select, table textarea {
+  margin: 0px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+input[type="range"] {
+  margin-bottom: 2.25em; }
+
+.input-radio input {
+  width: 10%;
+  margin-bottom: 0.75em; }
+  @media screen and (max-width: 859px) {
+    .input-radio input {
+      width: 6%; } }
+
+.input-radio input:last-of-type {
+  margin-bottom: 1.5em; }
+
+.input-radio span {
+  display: inline-block;
+  width: 87%; }
+  @media screen and (max-width: 859px) {
+    .input-radio span {
+      width: 91%;
+      font-size: 0.9em; } }
+
+.input-checkbox label {
+  float: right;
+  width: 91%; }
+  @media screen and (max-width: 859px) {
+    .input-checkbox label {
+      width: 93%; } }
+
+.input-checkbox input {
+  width: 8%; }
+  @media screen and (max-width: 859px) {
+    .input-checkbox input {
+      width: 6%; } }
+
+.input-date, .input-colour, .input-number {
+  width: 23%;
+  margin-right: 2%; }
+  @media screen and (max-width: 859px) {
+    .input-date, .input-colour, .input-number {
+      width: 40%; } }
+  @media screen and (max-width: 639px) {
+    .input-date, .input-colour, .input-number {
+      width: 50%; } }
+
+input[type=color] {
+  width: 100px;
+  height: 100px; }
+
+.input-range-number {
+  width: 100%; }
+  .input-range-number input[type="range"] {
+    width: 48%;
+    margin-right: 1.5em; }
+  .input-range-number input[type="number"] {
+    width: 10%; }
+
+input[type="submit"], input[type="reset"] {
+  width: 30%; }
+
+input[type="reset"] {
+  float: left; }
+
+input[type="submit"] {
+  float: right; }
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #facbbd; }
+
+.input-required label:after {
+  display: inline-block;
+  padding-left: 0.75em;
+  content: '*'; }
+
+.input-error input,
+.input-error select,
+.input-error textarea {
+  border-color: #facbbd; }
+
+.input-success input,
+.input-success select,
+.input-success textarea {
+  border-color: #94abb4; }
+
+.form-error, .form-success {
+  padding: 0.75em 1.5em; }
+
+.form-error {
+  border: 2px solid #facbbd;
+  color: #facbbd; }
+
+.form-success {
+  border: 2px solid #94abb4;
+  color: #94abb4; }
+
+/* tables */
+/* images, audio, video, canvas etc... */
+/* UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* buttons */
+/* navigation and menus */
+/* html, body, header, footer & basic main layout */
+/* PAGE LAYOUTS */
