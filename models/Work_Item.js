@@ -11,11 +11,11 @@ var Work_Item = new keystone.List('Work_Item', {
 });
 
 Work_Item.add({
-  title: { type: String, required: true, initial: false },
-	desc: { type: String, label: 'Description', required: true, initial: false },
+  title: { type: String, required: true, initial: true },
+	desc: { type: String, label: 'Description', required: true, initial: true },
   location: { type: Types.Location },
-  projectType: { type: Types.Select, label: 'Type of Project', required: true, initial: false, options: 'website/app, speaking, writing, installation, community, design'},
-  dateFrom: { type: Types.Date, required: true, initial: false },
+  projectType: { type: Types.Select, label: 'Type of Project', required: true, initial: true, options: 'website/app, speaking, writing, installation, community, design'},
+  dateFrom: { type: Types.Date, required: true, initial: true },
   dateTo: { type: Types.Date },
   externalLink: { type: Types.Url },
 	heroImage: { type: Types.CloudinaryImage },

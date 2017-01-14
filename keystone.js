@@ -35,6 +35,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 });
+keystone.set('default region', 'uk');
 
 // Load your project's Models
 keystone.import('models');
