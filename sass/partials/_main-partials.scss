@@ -1,0 +1,152 @@
+//CONTENTS
+
+// 0. html & body
+// 1. general
+// 2. page stuff
+//     2.1 All sections
+//     2.2 Header
+
+
+// 0. HTML & BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+html {}
+// kearning, ligatures
+body {
+  background-color: $white;
+  font-family: $font;
+  font-size: 100%;
+  color: $black;
+  @include at-least($screenLarge) { font-size: 112%; }
+  @include at-least($screenXlarge) { font-size: 120%; }
+  @include until($screenMedium) { font-size: 90%; }
+  @include until($screenSmall) { font-size: 80%; }
+}
+// remember to define focus styles!
+:focus { outline: 0; }
+
+
+// 1. ---------------------------------GENERAL
+p {
+  margin: 0px 0px $verticalSpace;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+h1, .link__main {
+  display: block;
+  color: $white;
+  font-family: $headerFont;
+  font-weight: bold;
+  line-height: 0.5;
+  letter-spacing: $letterSpacing;
+  text-transform: uppercase;
+  text-shadow:
+    0px -1px 2px transparentize($black, 0.8),
+    0px 1px 2px transparentize($white, 0.7);
+  transform: translateY($verticalSpace/14);
+}
+
+
+// 2. PAGE STUFF ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// 2.1 All sections
+[class^="section"] {
+  overflow: hidden;
+  padding: $verticalSpace*4 $gutter 0px;
+  text-align: center;
+  .link__main {
+    font-size: $fontSize*8;
+    text-decoration: none;
+  }
+}
+// loop over sections and set colours
+@for $i from 1 through 5 {
+  [class^="section"]:nth-child(#{$i}) {
+    background-color: nth($brand_cols, $i);
+    @include gradient(
+      nth($brand_cols, $i),
+      lighten(nth($brand_cols, $i), 4%),
+      180deg
+    );
+    box-shadow: inset 0px 2px 30px 0px darken(nth($brand_cols, $i), 6%);
+
+    h1, .link__main {
+      color: nth($text_cols, $i);
+    }
+  }
+}
+
+// 2.2 Header
+.section__header {
+  h1 {
+    font-size: $fontSize*12;
+  }
+  background-color: $brand2;
+}
+
+// 2. ----------------------------------------FOOTER
+footer {
+  // padding: $verticalSpace 0px 0px;
+  // display:flex; justify-content:space-between;
+  // background-color: $brand6;
+  // border-top: 2px solid $brand2;
+  // @include until($screenMedium) {
+  //   display: block;
+  //   text-align: center;
+  // }
+  // p, ul {
+  //     width:50%;
+  //     @include until($screenMedium) {
+  //       width:100%;
+  //     }
+  // }
+  p {
+    text-transform: uppercase;
+    color: nth($text_cols, 5);
+  }
+  ul {
+    @include clearListStyles;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    li {
+      a {
+        border:none;
+        svg {
+          width:auto; height:54px;
+          padding:$verticalSpace/2 $gutter/2;
+          box-sizing:border-box;
+          background-color: $brand6;
+          border-radius: 2px;
+          @include smallFancyBorder(nth($text_cols, 5), $brand6);
+          path {fill:nth($text_cols, 5);}
+        }
+        &:hover {
+          svg {
+            background-color:nth($text_cols, 5);
+            path {fill:$brand6;}
+          }
+        }
+      }
+    }
+  }
+}
+
+// .main-nav {
+//   position: fixed; top:0px; left:0px;
+//   width:100%; height:5vh;
+//   display:table;
+//   background-color: $brand3;
+//   a {
+//     display: table-cell;
+//     vertical-align: middle;
+//     padding: $verticalSpace/2 $gutter/2 $verticalSpace/3;
+//     box-sizing: border-box;
+
+//     @include smallFancyBorder($white, $brand3);
+
+//     color:$white; font-weight: bold;
+//     text-transform: uppercase; text-decoration:none;
+//     text-align: center; line-height:1;
+
+//   }
+// }

@@ -1,0 +1,216 @@
+/* reset margins, padding, borders & outline. Sets HTML block elements, also includes a couple of bits of normalize.css */
+html, body, div, span, applet, object, iframe,
+header, hgroup, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, time,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+figure, figcaption, video, audio, img,
+fieldset, form, label, legend, input, button, select,
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, canvas, nav, footer, aside,
+figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+section, article, aside, footer, nav, header, hgroup, details, figure, figcaption, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+/*Prevents iOS text size adjust after orientation change, without disabling user zoom.*/
+html {
+  -webkit-text-size-adjust: 100%; }
+
+[hidden] {
+  display: none; }
+
+/* set colours, fonts, sizes & breakpoints */
+@font-face {
+  font-family: "Khula";
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/Khula/Khula-SemiBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Khula";
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/Khula/Khula-ExtraBold.ttf") format("truetype"); }
+/* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* images, audio, video, canvas etc... */
+/*media*/
+audio,
+video,
+img,
+.media-feature,
+.media-feature audio,
+.media-feature video,
+.media-feature img {
+  width: 100%;
+  height: auto; }
+
+figure audio, figure video, figure img {
+  margin-bottom: 0.9em; }
+
+figcaption {
+  font-style: italic; }
+
+img {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices.*/
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+.thumbnails ul {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  list-style: none; }
+  .thumbnails ul li {
+    margin: 0px;
+    padding: 0px; }
+  .thumbnails ul li {
+    overflow: hidden;
+    display: inline-block;
+    width: 120px;
+    height: 120px; }
+.thumbnails img {
+  width: auto;
+  height: 100%; }
+
+/* UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* navigation and menus */
+/* PAGE SPECIFICS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+body {
+  background-color: #fdfdfc;
+  font-family: "Khula", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: #072731; }
+  @media screen and (min-width: 860px) {
+    body {
+      font-size: 112%; } }
+  @media screen and (min-width: 1280px) {
+    body {
+      font-size: 120%; } }
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 90%; } }
+  @media screen and (max-width: 619px) {
+    body {
+      font-size: 80%; } }
+
+:focus {
+  outline: 0; }
+
+p {
+  margin: 0px 0px 1.8em;
+  font-size: 1em;
+  line-height: 1.8;
+  letter-spacing: 0.02em; }
+
+h1, .link__main {
+  display: block;
+  color: #fdfdfc;
+  font-family: "Khula", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 0.5;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0px -1px 2px rgba(7, 39, 49, 0.2), 0px 1px 2px rgba(253, 253, 252, 0.3);
+  transform: translateY(0.1285714286em); }
+
+[class^="section"] {
+  overflow: hidden;
+  padding: 7.2em 1.8em 0px;
+  text-align: center; }
+  [class^="section"] .link__main {
+    font-size: 8em;
+    text-decoration: none; }
+
+[class^="section"]:nth-child(1) {
+  background-color: #e3d7ce;
+  background-image: linear-gradient(180deg, #e3d7ce, #ebe2db);
+  box-shadow: inset 0px 2px 30px 0px #d8c8bb; }
+  [class^="section"]:nth-child(1) h1, [class^="section"]:nth-child(1) .link__main {
+    color: white; }
+
+[class^="section"]:nth-child(2) {
+  background-color: #dfb3b4;
+  background-image: linear-gradient(180deg, #dfb3b4, #e5c2c2);
+  box-shadow: inset 0px 2px 30px 0px #d69e9f; }
+  [class^="section"]:nth-child(2) h1, [class^="section"]:nth-child(2) .link__main {
+    color: #f4e6e6; }
+
+[class^="section"]:nth-child(3) {
+  background-color: #b76280;
+  background-image: linear-gradient(180deg, #b76280, #bd708b);
+  box-shadow: inset 0px 2px 30px 0px #ab4f6f; }
+  [class^="section"]:nth-child(3) h1, [class^="section"]:nth-child(3) .link__main {
+    color: #e0bdc9; }
+
+[class^="section"]:nth-child(4) {
+  background-color: #725571;
+  background-image: linear-gradient(180deg, #725571, #7e5d7d);
+  box-shadow: inset 0px 2px 30px 0px #614860; }
+  [class^="section"]:nth-child(4) h1, [class^="section"]:nth-child(4) .link__main {
+    color: #c4b0c4; }
+
+[class^="section"]:nth-child(5) {
+  background-color: #293e56;
+  background-image: linear-gradient(180deg, #293e56, #304764);
+  box-shadow: inset 0px 2px 30px 0px #1f2f41; }
+  [class^="section"]:nth-child(5) h1, [class^="section"]:nth-child(5) .link__main {
+    color: #cbd7e6; }
+
+.section__header {
+  background-color: #e3d7ce; }
+  .section__header h1 {
+    font-size: 12em; }
+
+footer p {
+  text-transform: uppercase;
+  color: #cbd7e6; }
+footer ul {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  footer ul li {
+    margin: 0px;
+    padding: 0px; }
+  footer ul li a {
+    border: none; }
+    footer ul li a svg {
+      width: auto;
+      height: 54px;
+      padding: 0.9em 0.9em;
+      box-sizing: border-box;
+      background-color: #293e56;
+      border-radius: 2px;
+      border: 1px solid #cbd7e6;
+      box-shadow: inset 0px 0px 0px 2px #293e56, inset 0px 0px 0px 5px rgba(203, 215, 230, 0.4); }
+      footer ul li a svg path {
+        fill: #cbd7e6; }
+    footer ul li a:hover svg {
+      background-color: #cbd7e6; }
+      footer ul li a:hover svg path {
+        fill: #293e56; }
+
+/*# sourceMappingURL=style.css.map */

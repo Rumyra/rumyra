@@ -1,0 +1,26 @@
+
+// THIS FILE PULLS IN ALL SCSS FILES WE USE
+
+/* reset margins, padding, borders & outline. Sets HTML block elements, also includes a couple of bits of normalize.css */
+@import 'partials/_reset.scss';
+// helpers, mainly mixins
+@import 'partials/_helpers.scss';
+/* set colours, fonts, sizes & breakpoints */
+@import 'partials/_settings.scss';
+
+/* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// we don't need a lot for this page
+/* images, audio, video, canvas etc... */
+@import 'partials/_media.scss';
+
+/* UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+// any would go here, but again we don't need a lot for this page
+
+/* navigation and menus */
+// @import 'partials/_nav-menu.scss';
+
+/* PAGE SPECIFICS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import 'partials/_main-partials.scss';
+
+
+
