@@ -37,15 +37,21 @@
   </header>
 
   <section class="section__portfolio">
-    <a class="link__main" href="https://ruthjohn.com">Portfolio</a>
+    <a href="https://ruthjohn.com">
+      <span class="link__main">Portfolio</span>
+    </a>
   </section>
 
   <section class="section__blog">
-    <a class="link__main" href="https://blog.rumyra.com">Blog</a>
+    <a href="https://blog.rumyra.com">
+      <span class="link__main">Blog</span>
+    </a>
   </section>
 
   <section class="section__toys">
-    <a class="link__main" href="https://toys.rumyra.com">Toys</a>
+    <a href="https://toys.rumyra.com">
+      <span class="link__main">Toys</span>
+    </a>
   </section>
 
 <footer class="section__footer">
@@ -91,5 +97,22 @@
   <p><span>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Designed and built by Ruth John.</span></p>
 </footer>
 
-</div></body>
+</div>
+
+<script type="text/javascript">
+
+(function(window, document){
+
+  var links = document.querySelectorAll('.link__main');
+
+  links.forEach(function(el,i) {
+    el.addEventListener('touchstart', function() {
+      this.classList.add('touched');
+    }, false)
+  })
+
+})(window, document);
+
+</script>
+</body>
 </html>

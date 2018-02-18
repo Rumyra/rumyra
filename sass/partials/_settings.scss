@@ -42,9 +42,10 @@ $verticalSpace:1.8em !default;
 $gutter:1.8em !default;
 
 // use with breakpoint mixin like @include until($small) or @include at-least($screenLarge)
-$screenSmall:620px;
-$screenMedium:769px;
-$screenLarge:860px;
+$screenXsmall:540px;
+$screenSmall:690px;
+$screenMedium:780px;
+$screenLarge:920px;
 $screenXlarge:1280px;
 
 

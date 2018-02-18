@@ -11,14 +11,15 @@
 html {}
 // kearning, ligatures
 body {
-  background-color: $white;
+  background-color: lighten($blue, 4%);
   font-family: $font;
   font-size: 100%;
   color: $black;
-  @include at-least($screenLarge) { font-size: 112%; }
+  @include until($screenLarge) { font-size: 80%; }
+  @include until($screenMedium) { font-size: 70%; }
+  @include until($screenSmall) { font-size: 60%; }
+  @include until($screenXsmall) { font-size: 40%; }
   @include at-least($screenXlarge) { font-size: 120%; }
-  @include until($screenMedium) { font-size: 90%; }
-  @include until($screenSmall) { font-size: 80%; }
 }
 // remember to define focus styles!
 :focus { outline: 0; }
@@ -48,19 +49,33 @@ h1, .link__main {
 
 // 2. PAGE STUFF ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-// 2.1 All sections
-[class^="section"] {
-  overflow: hidden;
-  padding: $verticalSpace*4 $gutter 0px;
+%section {
+  display: block; overflow: hidden;
+  padding: 15vh $gutter 0px;
   text-align: center;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY($verticalSpace/14);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// 2.1 All sections
+[class^="section"] a {
+  @extend %section;
   .link__main {
     font-size: $fontSize*8;
     text-decoration: none;
+    transition: translateY 1s linear;
   }
 }
 // loop over sections and set colours
-@for $i from 1 through 5 {
-  [class^="section"]:nth-child(#{$i}) {
+@for $i from 2 through 4 {
+  [class^="section"]:nth-child(#{$i}) a {
     background-color: nth($brand_cols, $i);
     @include gradient(
       nth($brand_cols, $i),
@@ -69,36 +84,54 @@ h1, .link__main {
     );
     box-shadow: inset 0px 2px 30px 0px darken(nth($brand_cols, $i), 6%);
 
-    h1, .link__main {
+    .link__main {
       color: nth($text_cols, $i);
+    }
+
+    &:hover {
+      @include gradient(
+        lighten(nth($brand_cols, $i), 3%),
+        lighten(nth($brand_cols, $i), 6%),
+        180deg
+      );
+      .link__main {
+        color: lighten(nth($text_cols, $i),5%);
+        animation: moveUp 0.5s ease-in;
+        transform: translateY(0px);
+      }
     }
   }
 }
 
 // 2.2 Header
 .section__header {
+  @extend %section;
+  background-color: nth($brand_cols, 1);
+  @include gradient(
+    nth($brand_cols, 1),
+    lighten(nth($brand_cols, 1), 4%),
+    180deg
+  );
+  box-shadow: inset 0px 2px 30px 0px darken(nth($brand_cols, 1), 6%);
+
   h1 {
     font-size: $fontSize*12;
+    color: nth($text_cols, 1);
   }
-  background-color: $brand2;
+}
+.section__footer {
+  @extend %section;
+  background-color: nth($brand_cols, 5);
+  @include gradient(
+    nth($brand_cols, 5),
+    lighten(nth($brand_cols, 5), 4%),
+    180deg
+  );
+  box-shadow: inset 0px 2px 30px 0px darken(nth($brand_cols, 5), 6%);
 }
 
 // 2. ----------------------------------------FOOTER
-footer {
-  // padding: $verticalSpace 0px 0px;
-  // display:flex; justify-content:space-between;
-  // background-color: $brand6;
-  // border-top: 2px solid $brand2;
-  // @include until($screenMedium) {
-  //   display: block;
-  //   text-align: center;
-  // }
-  // p, ul {
-  //     width:50%;
-  //     @include until($screenMedium) {
-  //       width:100%;
-  //     }
-  // }
+.section__footer {
   p {
     text-transform: uppercase;
     color: nth($text_cols, 5);
@@ -110,9 +143,15 @@ footer {
     flex-wrap:wrap;
     li {
       a {
+        padding:0px;
         border:none;
         svg {
-          width:auto; height:54px;
+          width:auto; height:64px;
+          @include until($screenLarge) { height: 54px; }
+          @include until($screenMedium) { height: 44px; }
+          // @include until($screenSmall) { height: 34px; }
+          // @include until($screenXsmall) { height: 24px; }
+          @include at-least($screenXlarge) { height: 74px; }
           padding:$verticalSpace/2 $gutter/2;
           box-sizing:border-box;
           background-color: $brand6;
@@ -130,23 +169,3 @@ footer {
     }
   }
 }
-
-// .main-nav {
-//   position: fixed; top:0px; left:0px;
-//   width:100%; height:5vh;
-//   display:table;
-//   background-color: $brand3;
-//   a {
-//     display: table-cell;
-//     vertical-align: middle;
-//     padding: $verticalSpace/2 $gutter/2 $verticalSpace/3;
-//     box-sizing: border-box;
-
-//     @include smallFancyBorder($white, $brand3);
-
-//     color:$white; font-weight: bold;
-//     text-transform: uppercase; text-decoration:none;
-//     text-align: center; line-height:1;
-
-//   }
-// }

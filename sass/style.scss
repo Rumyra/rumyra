@@ -8,17 +8,6 @@
 /* set colours, fonts, sizes & breakpoints */
 @import 'partials/_settings.scss';
 
-/* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-// we don't need a lot for this page
-/* images, audio, video, canvas etc... */
-@import 'partials/_media.scss';
-
-/* UI ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-// any would go here, but again we don't need a lot for this page
-
-/* navigation and menus */
-// @import 'partials/_nav-menu.scss';
-
 /* PAGE SPECIFICS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @import 'partials/_main-partials.scss';
 
